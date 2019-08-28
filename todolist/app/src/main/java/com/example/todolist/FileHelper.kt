@@ -24,6 +24,7 @@ class FileHelper{
             var ois : ObjectInputStream = ObjectInputStream(fis)
             itemlist = ois.readObject() as ArrayList<String>?
         }catch(e : FileNotFoundException){
+            itemlist = arrayListOf<String>()
             e.printStackTrace()
         }catch(e: IOException){
             e.printStackTrace()
